@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - LoanSure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/feedback-styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateyo/2.3.2/jquery.rateyo.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="feedback-box">
+            <h2><i class="fas fa-comments"></i> Feedback Form</h2>
+            <p>We value your feedback to improve our services</p>
+            
+            <form method="POST"  id="feedbackForm" name="feedback" >
+                
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i></label>
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                    {{ form.name.errors }}
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i></label>
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    {{ form.email.errors }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackType"><i class="fas fa-list"></i></label>
+                    
+                    {{ form.type.label_tag }}
+                    {{ form.type }}
+                    {{ form.type.errors }}
+                </div>
+                
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i></label>
+                    {{ form.message.label_tag }}
+                    {{ form.message }}
+                    {{ form.message.errors }}
+                </div>
+<!--                 
+                <div >
+                <label for="rating"></label>
+                    <div id="star-rating"></div>
+                    {{ form.rating.label_tag }}
+                    {{ form.rating }}
+                    {{ form.rating.errors }}
+                </div>
+                 -->
+                
+
+                
+                
+
+                
+
+
+                
+
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateyo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="{% static 'javascript/feedback.js' %}"></script>
+</body>
+</html> 
