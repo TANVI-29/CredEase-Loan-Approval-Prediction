@@ -26,18 +26,18 @@ The project focuses on data preprocessing, feature engineering, and model evalua
 ---
 
 
----
+
 
 ## 🖼️ Application Screenshots
 
 ### 🏠 Home Page
-![Home Page](screenshots/loan1.png)
+![Home Page](screenshots/loan1.PNG)
 
 ### 🧮 Loan Calculator
-![Loan Calculator](screenshots/loan2.png)
+![Loan Calculator](screenshots/loan2.PNG)
 
 ### 🔮 Loan Prediction Result
-![Prediction Result](screenshots/prediction.png)
+![Prediction Result](screenshots/prediction.PNG)
 
 
 
